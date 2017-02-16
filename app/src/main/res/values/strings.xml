@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MisContactos</string>
+    <string name="nombre">Hugo Herrera</string>
+    <string name="telefono">5529383958</string>
+    <string name="email">hugoe132@gmail.com</string>
+
+    <string name="pnombre">Hugo Herrera</string>
+    <string name="ptelefono">5529383958</string>
+    <string name="pemail">hugoe132@gmail.com</string>
+
+</resources>

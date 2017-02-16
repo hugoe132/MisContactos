@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detalle_contacto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hugoe.miscontactos.DetalleContacto">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textSize="@dimen/nombre"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/llPaddingTop"
+        android:onClick="llamar">
+
+        <ImageView
+            android:id="@+id/imTelefono"
+            android:layout_width="@dimen/imWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/tel_fono_48" />
+
+        <TextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/tvLayoutMmarginLeft"
+            android:text="@string/telefono"
+            android:textSize="@dimen/telefono" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/llPaddingTop"
+        android:onClick="enviarEmail">
+
+        <ImageView
+            android:id="@+id/imEmail"
+            android:layout_width="@dimen/imWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/gmail_48" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/tvLayoutMmarginLeft"
+            android:text="@string/email"
+            android:textSize="@dimen/email" />
+    </LinearLayout>
+
+</LinearLayout>
