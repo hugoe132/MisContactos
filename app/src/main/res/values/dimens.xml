@@ -8,5 +8,7 @@
     <dimen name="imWidth">50dp</dimen>
     <dimen name="llPaddingTop">20dp</dimen>
     <dimen name="tvLayoutMmarginLeft">20dp</dimen>
+    <dimen name="cornerRadius">20dp</dimen>
+    <dimen name="textsize">20sp</dimen>
 
 </resources>

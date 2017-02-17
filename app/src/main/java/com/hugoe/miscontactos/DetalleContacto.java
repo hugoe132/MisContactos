@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -19,22 +20,16 @@ public class DetalleContacto extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_contacto);
-
         Bundle extras = getIntent().getExtras();
-
         String nombre = extras.getString("nombre");
         String telefono = extras.getString("telefono");
         String email = extras.getString("email");
-
         TextView tvNombre = (TextView) findViewById(R.id.tvNombre);
         tvTelefono = (TextView) findViewById(R.id.tvTelefono);
         tvEmail = (TextView) findViewById(R.id.tvEmail);
-
         tvNombre.setText(nombre);
         tvTelefono.setText(telefono);
         tvEmail.setText(email);
-
-
     }
 
 
@@ -51,6 +46,7 @@ public class DetalleContacto extends AppCompatActivity {
             return;
         }
         startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + telefono)));
+
     }
 
     public void enviarEmail(View v) {
@@ -63,5 +59,13 @@ public class DetalleContacto extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent i = new Intent(DetalleContacto.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

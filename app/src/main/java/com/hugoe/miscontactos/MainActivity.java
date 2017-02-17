@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         contactos = new ArrayList<Contactos>();
-        contactos.add(new Contactos("Hugo Herrera", "5529383959", "hugoe132@gmail.com"));
-        contactos.add(new Contactos("Selene Muñoz", "5531755655", "selenemu@gmail.com"));
-        contactos.add(new Contactos("Karem Luna", "5543678988", "kami@gmail.com"));
-        contactos.add(new Contactos("Juan Pablo Herrera", "5543448687", "juampihermu@gmail.com"));
+        contactos.add(new Contactos(R.drawable.scorp, "Hugo Herrera", "5529383959", "hugoe132@gmail.com"));
+        contactos.add(new Contactos(R.drawable.scorp, "Selene Muñoz", "5531755655", "selenemu@gmail.com"));
+        contactos.add(new Contactos(R.drawable.scorp, "Karem Luna", "5543678988", "kami@gmail.com"));
+        contactos.add(new Contactos(R.drawable.scorp, "Juan Pablo Herrera", "5543448687", "juampihermu@gmail.com"));
 
         ArrayList<String> nombresContactos = new ArrayList<>();
         for (Contactos contacto : contactos) {
@@ -35,11 +35,12 @@ public class MainActivity extends AppCompatActivity {
         listContactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(MainActivity.this,DetalleContacto.class);
-                i.putExtra("nombre",contactos.get(position).getNombre());
-                i.putExtra("telefono",contactos.get(position).getTelefono());
-                i.putExtra("email",contactos.get(position).getEmail());
+                Intent i = new Intent(MainActivity.this, DetalleContacto.class);
+                i.putExtra("nombre", contactos.get(position).getNombre());
+                i.putExtra("telefono", contactos.get(position).getTelefono());
+                i.putExtra("email", contactos.get(position).getEmail());
                 startActivity(i);
+                finish();
             }
         });
 

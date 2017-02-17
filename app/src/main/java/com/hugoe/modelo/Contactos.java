@@ -6,11 +6,13 @@ package com.hugoe.modelo;
 
 public class Contactos {
 
+    private int foto;
     private String nombre;
     private String telefono;
     private String email;
 
-    public Contactos(String nombre, String telefono, String email) {
+    public Contactos(int foto, String nombre, String telefono, String email) {
+        this.foto = foto;
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
@@ -38,5 +40,13 @@ public class Contactos {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
     }
 }

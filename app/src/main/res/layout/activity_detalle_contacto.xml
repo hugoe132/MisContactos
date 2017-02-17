@@ -23,9 +23,9 @@
         android:id="@+id/llTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="llamar"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/llPaddingTop"
-        android:onClick="llamar">
+        android:paddingTop="@dimen/llPaddingTop">
 
         <ImageView
             android:id="@+id/imTelefono"
@@ -48,9 +48,9 @@
         android:id="@+id/llEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="enviarEmail"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/llPaddingTop"
-        android:onClick="enviarEmail">
+        android:paddingTop="@dimen/llPaddingTop">
 
         <ImageView
             android:id="@+id/imEmail"
